@@ -1,10 +1,3 @@
-
-let now = new Date();
-const height = 188;
-
-// console.log(now);
-// alert(now);
-
 // console.log(null === "");
 // console.log(undefined === "");
 // console.log(null === undefined);
@@ -30,7 +23,8 @@ me.blog = "jinow9595.tistory.com";
 console.log(me);
 
 const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
-const title = document.querySelector("#title");
+const title = document.querySelector("h1");
+const body = document.querySelector("body");
 
 const superEventHandler = {
     mouseenter: function (index) {
@@ -66,3 +60,28 @@ window.addEventListener("contextmenu", function () {
 window.addEventListener("resize", function () {
     superEventHandler.resize(2);
 });
+
+// body.addEventListener("click", backgroundChangeEvent);
+// window.addEventListener("resize", innerWidthChangeEvent);
+
+function backgroundChangeEvent() {
+    // if (body.className === "test") {
+    //     body.className = "";
+    // } else {
+    //     body.className = "test";
+    // }
+    body.classList.toggle("test");
+}
+
+function innerWidthChangeEvent() {
+    if (innerWidth > 1400) {
+        body.className = "";
+    } else if (innerWidth >= 800) {
+        body.classList.add("middleInnerWidth");
+        body.classList.remove("minInnerWidth");
+    } else {
+        console.log(body.classList);
+        body.classList.add("minInnerWidth");
+        body.classList.remove("middleInnerWidth");
+    }
+}
