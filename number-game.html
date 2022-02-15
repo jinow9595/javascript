@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="font-weight: bold;">Random Number Game</h1>
+    <form action="" id="play">
+        <div>
+            <span style="font-weight: bold;">Generate a number between 0 and</span>
+            <span>
+                <input type="number" id="boundary" min="0" style="width: 50px;" required>
+            </span>
+        </div>
+        <div>
+            <span>Guess the number: </span>
+            <span>
+                <input type="number" id="input_number" min="0" style="width: 50px;" required>
+                <button>play!</button>
+            </span>
+        </div>
+    </form>
+    <div id="result_div" style="display: none;">
+        <span>You chose: </span>
+        <span id="user_number"></span>
+        <span>, the machine chose: </span>
+        <span id="machine_number"></span>
+        <span>.</span>
+    </div>
+    <div>
+        <span style="font-weight: bold;" id="game_result"></span>
+    </div>
+    <script src="number-game.js"></script>
+</body>
+</html>
